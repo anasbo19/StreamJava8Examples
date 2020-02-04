@@ -55,8 +55,7 @@ public class StreamBuildingApp {
 		}
 
 		Stream<Integer> streamFromList = list.stream();
-		List<Integer> evenNumbersList = streamFromList.filter(i -> i % 2 == 0)
-														.collect(Collectors.toList());
+		List<Integer> evenNumbersList = streamFromList.filter(i -> i % 2 == 0).collect(Collectors.toList());
 
 		System.out.print(evenNumbersList);
 		System.out.println();
@@ -71,8 +70,7 @@ public class StreamBuildingApp {
 		}
 
 		Stream<Integer> streamFromArrayList = list.stream();
-		Integer[] evenNumbersArr = streamFromArrayList.filter(i -> i % 2 == 0)
-														.toArray(Integer[]::new);
+		Integer[] evenNumbersArr = streamFromArrayList.filter(i -> i % 2 == 0).toArray(Integer[]::new);
 
 		for (Integer i : evenNumbersArr) {
 			System.out.println(i);
