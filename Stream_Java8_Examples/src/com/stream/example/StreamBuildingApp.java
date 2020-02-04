@@ -60,6 +60,27 @@ public class StreamBuildingApp {
         									.collect(Collectors.toList());
         
         System.out.print(evenNumbersList);
+        System.out.println();
+        
+        
+        System.out.println("_________________________________________________");
+		System.out.println("Converting Stream to Array Using Stream.filter() && Stream.toArray()");
+		System.out.println("_________________________________________________");
+		
+        List<Integer> intsArrayList = new ArrayList<Integer>();
+        for(int i = 1; i< 10; i++){
+            intsArrayList.add(i);
+        }
+        
+        Stream<Integer> streamFromArrayList = list.stream();
+        Integer[] evenNumbersArr = streamFromArrayList.filter(i -> i%2 == 0)
+        								  .toArray(Integer[]::new);
+        
+        for(Integer i : evenNumbersArr) {
+        	System.out.println(i);
+        }
+        
+        
         
 	}
 
